@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  font-size: 16px;
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6, label, input, ol, ul, li {
+  font-family: "Roboto", sans-serif;
+  overflow-wrap: break-word;
+}
+summary, details {
+  font-family: "Roboto", sans-serif;
+}
+/* 9. Improve line wrapping */
+p {
+  font-weight: 400;
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+:root {
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.newsletter__article {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.newsletter__copy-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.newsletter__headline {
+  font-size: 2.5rem;
+}
+
+.newsletter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.newsletter__list-item {
+  background-image: url('./assets/images/icon-list.svg');
+  background-repeat: no-repeat;
+  padding-inline-start: 2rem;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-block-start: 1.25rem;
+}
+
+.newsletter__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsletter__form label[for="email"] {
+  color: var(--blue-800);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.newsletter__form input[type="email"] {
+  border: 1px solid var(--grey);
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+.newletter__form input[type="email"]:active, .newletter__form input[type="email"]:focus {
+  outline: 1px solid var(--blue-700);
+}
+
+.newsletter__form input[type="submit"] {
+  background-color: var(--blue-800);
+  border-radius: 0.5rem;
+  color: var(--white);
+  padding: 0.875rem;
+  outline: var(--blue-800);
+}
