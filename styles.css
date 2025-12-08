@@ -42,7 +42,7 @@ input, button, textarea, select {
   font: inherit;
 }
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6, label, input, ol, ul, li {
+p, h1, h2, h3, h4, h5, h6, label, input, ol, ul, li, span {
   font-family: "Roboto", sans-serif;
   overflow-wrap: break-word;
 }
@@ -120,16 +120,36 @@ main {
   margin-block-start: 1.25rem;
 }
 
+.newsletter__form.showError label[type="email"], .newsletter__form.showError input[type="email"] {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.newsletter__form.showError #error_message {
+  visibility: visible;
+}
+
 .newsletter__form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+.newsletter__form-label-group {
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.newsletter__form-label-group #error_message {
+  color: var(--red);
+  visibility: hidden;
+  font-size: 0.75rem;
+}
+
 .newsletter__form label[for="email"] {
   color: var(--blue-800);
   font-size: 0.75rem;
-  font-weight: 700;
 }
 
 .newsletter__form input[type="email"] {

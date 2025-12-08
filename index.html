@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
+  <script type="text/javascript" src="./main.js" defer></script>
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
@@ -28,10 +29,13 @@
           <li class="newsletter__list-item">Measuring to ensure updates are a success</li>
           <li class="newsletter__list-item">And much more!</li>
         </ul>
-        <form class="newsletter__form">
+        <form class="newsletter__form" onsubmit="submitForm(event)">
           <div class="newsletter__form-group">
-            <label for="email">Email address</label>
-            <input type="email" id="email" placeholder="email@company.com" />
+            <div class="newsletter__form-label-group">
+              <label for="email">Email address</label>
+              <span id="error_message">Valid email required</span>
+            </div>
+            <input type="email" id="email" name="user_email" placeholder="email@company.com" aria-describedby="error_message" required />
           </div>
           <input type="submit" value="Subscribe to monthly newsletter" />
         </form>
