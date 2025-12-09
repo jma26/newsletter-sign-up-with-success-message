@@ -18,7 +18,7 @@
 </head>
 <body>
   <main>
-    <article class="newsletter__article">
+    <article class="newsletter__article newsletter__article--signup">
       <img class="newsletter__image newsletter__image--mobile" src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
       <img class="newsletter__image newsletter__image--desktop" src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
       <div class="newsletter__copy-wrapper">
@@ -40,6 +40,13 @@
           <input type="submit" value="Subscribe to monthly newsletter" />
         </form>
       </div>
+    </article>
+
+    <article class="newsletter__article newsletter__article--success">
+      <img class="newsletter__image newsletter__image--success" src="./assets/images/icon-success.svg" alt="" />
+      <h2 class="newsletter__headline newsletter__headline--success">Thanks for subscribing!</h2>
+      <p>A confirmation email has been sent to <span class="user_email"></span>. Please open it and click the button inside to confirm your subscription</p>
+      <button class="newsletter__button--success" onClick="refreshPage()">Dismiss message</button>
     </article>
   </main>
 </body>

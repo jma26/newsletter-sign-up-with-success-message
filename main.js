@@ -3,11 +3,16 @@ function submitForm(event) {
 
   const form = event.target;
   const { user_email } = form;
+  const signupArticle = document.querySelector('.newsletter__article--signup');
+  const successArticle = document.querySelector('.newsletter__article--success');
+  const user_emailElement = document.querySelector('.user_email');
 
   if (!emailValidation(user_email.value)) {
     form.classList.add('showError');
   } else {
-    console.log('success!');
+    signupArticle.classList.add('hideSignupModal');
+    successArticle.classList.add('showSuccessModal');
+    user_emailElement.textContent = user_email.value;
   }
 }
 
@@ -20,4 +25,8 @@ function emailValidation(input) {
   } 
 
   return true;
+}
+
+function refreshPage() {
+  location.reload();
 }
