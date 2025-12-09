@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
-  <script type="text/javascript" src="./main.js" defer></script>
+  <script src="./main.js" defer></script>
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
@@ -37,7 +37,7 @@
             </div>
             <input type="email" id="email" name="user_email" placeholder="email@company.com" aria-describedby="error_message" required />
           </div>
-          <input type="submit" value="Subscribe to monthly newsletter" />
+          <button type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </article>
@@ -46,7 +46,7 @@
       <img class="newsletter__image newsletter__image--success" src="./assets/images/icon-success.svg" alt="" />
       <h2 class="newsletter__headline newsletter__headline--success">Thanks for subscribing!</h2>
       <p>A confirmation email has been sent to <span class="user_email"></span>. Please open it and click the button inside to confirm your subscription</p>
-      <button class="newsletter__button--success" onClick="refreshPage()">Dismiss message</button>
+      <button class="newsletter__button--success" type="button" onClick="refreshPage()">Dismiss message</button>
     </article>
   </main>
 </body>

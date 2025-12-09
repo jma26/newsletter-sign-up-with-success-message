@@ -164,7 +164,7 @@ main {
   outline: 1px solid var(--blue-700);
 }
 
-.newsletter__form input[type="submit"] {
+.newsletter__form button[type="submit"] {
   background-color: var(--blue-800);
   border: none;
   border-radius: 0.5rem;
@@ -173,7 +173,7 @@ main {
   padding: 0.875rem;
 }
 
-.newsletter__form input[type="submit"]:active, .newsletter__form input[type="submit"]:focus, .newsletter__form input[type="submit"]:hover {
+.newsletter__form button[type="submit"]:active, .newsletter__form button[type="submit"]:focus, .newsletter__form button[type="submit"]:hover {
   background: linear-gradient(90deg, var(--red), var(--orange));
   box-shadow: 4px 8px 12px var(--red-gray);
 }
